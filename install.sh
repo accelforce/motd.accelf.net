@@ -10,10 +10,10 @@ do_install() {
   echo "Disable other annoying messages"
   sudo chmod -x /etc/update-motd.d/10-help-text /etc/update-motd.d/80-livepatch /etc/update-motd.d/91-release-upgrade
   echo "Setup server infomation"
-  sudo curl -fsSL https://motd.accelf.net/85-server-info.sh -o /etc/update-motd.d/85-server-info.sh
-  sudo chmod +x /etc/update-motd.d/85-server-info.sh
+  sudo curl -fsSL https://motd.accelf.net/85-server-info.sh -o /etc/update-motd.d/85-server-info
+  sudo chmod +x /etc/update-motd.d/85-server-info
   echo "Finally edit server infomation by yourself"
-  sudo vi /etc/update-motd.d/85-server-info.sh
+  sudo vi /etc/update-motd.d/85-server-info
   echo "DONE!"
 }
 
