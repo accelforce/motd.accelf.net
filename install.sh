@@ -11,6 +11,7 @@ do_install() {
   sudo chmod -x /etc/update-motd.d/10-help-text /etc/update-motd.d/80-livepatch /etc/update-motd.d/91-release-upgrade
   echo "Setup server infomation"
   sudo curl -fsSL https://motd.accelf.net/85-server-info.sh -o /etc/update-motd.d/85-server-info
+  sudo sed -ie "s/\$HOSTNAME/$HOSTNAME/g" /etc/update-motd.d/85-server-info
   sudo chmod +x /etc/update-motd.d/85-server-info
   echo "Finally edit server infomation by yourself"
   sudo vi /etc/update-motd.d/85-server-info
