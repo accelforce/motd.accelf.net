@@ -23,11 +23,11 @@ do_install() {
   echo "Setup server infomation"
   echo "Please provide the information of this server"
   read -p "Host Name [$HOSTNAME]: " HOST < /dev/tty
-  export HOST=${HOST:-$HOSTNAME}
+  export HOST="${HOST:-$HOSTNAME}"
   read -p "Location: " LOCATION < /dev/tty
-  export LOCATION=$LOCATION
+  export LOCATION="$LOCATION"
   read -p "Purpose: " PURPOSE < /dev/tty
-  export PURPOSE=$PURPOSE
+  export PURPOSE="$PURPOSE"
   curl -fsSL https://motd.accelf.net/85-server-info.sh | envsubst | sudo tee /etc/update-motd.d/85-server-info > /dev/null
   sudo chmod +x /etc/update-motd.d/85-server-info
 
