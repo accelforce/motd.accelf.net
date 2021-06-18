@@ -1,7 +1,4 @@
 #!/bin/sh
-HOST="$HOSTNAME"
-LOCATION='PLACEHOLDER'
-PURPOSE='PLACEHOLDER'
 
 printf "\n"
 printf ">>> Welcome to the server \e[30;42;5m$HOST\e[m\n"
